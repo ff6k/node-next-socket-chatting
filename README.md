@@ -1,7 +1,7 @@
 # Cool-Wind
 
 <div align="center">
-    <h1><img src="https://github.com/msk4862/Anomly/blob/master/public/images/chat-logo1.png" width="400"></h1>
+    <h1><img src="https://avatars.githubusercontent.com/u/75097898?v=4" width="400"></h1>
     <p>
          <b>This is a chat app where one can chat anonymously and can create unlimited chat rooms</b>
     </p>
