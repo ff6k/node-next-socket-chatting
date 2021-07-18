@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+    - "stable"
+cache: yarn
+
+notification:
+    email: false
+
+install:
+    - yarn global add codecov
+    - yarn
+
+before-script:
+    - echo "Running scripts"
+script:
+    - yarn format
+    - yarn test
+
+after-success:
+    - codecov
+    - echo "Success"
+after-failure:
+    - echo "Failure"

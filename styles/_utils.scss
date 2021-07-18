@@ -1,0 +1,89 @@
+@mixin btn-secondary($font-color, $background-color, $width: 2px) {
+    background-color: $background-color;
+    border: $width solid $font-color;
+    color: $font-color;
+}
+
+@mixin button-variant($font-color, $background-color) {
+    background-color: $background-color;
+    color: $font-color;
+}
+
+@mixin box-shadow($width, $color: #000, $alpha: 0.5) {
+    box-shadow: 0 0 $width rgba($color, $alpha);
+}
+
+@mixin inner-box-shadow($width, $color: #000, $alpha: 0.5) {
+    box-shadow: inset 0 0 $width rgba($color, $alpha);
+}
+
+@mixin tooltip-position(
+    $top: false,
+    $right: false,
+    $bottom: false,
+    $left: false
+) {
+    @if $top != false {
+        top: $top;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @if $right != false {
+        right: $right;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @if $bottom != false {
+        bottom: $bottom;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @if $left != false {
+        left: $left;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin animation(
+    $name,
+    $origin,
+    $time,
+    $timing-func: ease-in,
+    $fill-mode: null
+) {
+    animation: $name $time $timing-func $fill-mode;
+    -webkit-animation: $name $time $timing-func $fill-mode;
+    -moz-animation: $name $time $timing-func $fill-mode;
+    transform-origin: $origin;
+}
+
+@keyframes foldX {
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes foldY {
+    100% {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes unfoldX {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(100%);
+    }
+}
+
+@keyframes unfoldY {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(100%);
+    }
+}
